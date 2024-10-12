@@ -1,0 +1,18 @@
+Estes son les coincidencies:
+1- diego, diego, diego = 3
+2- juan, juan juan , juan = 4
+3- pedro = 1
+
+Respetant Mayuscules y Minuscules:
+hola soy gabriel
+HOLA SOY GABRIEL
+holá sóy gábriel
+HOLÁ SÓY GÁBRIEL
+
+Sustituimos
+Flor => FLOR
+Flor => flor
+
+
+
+
