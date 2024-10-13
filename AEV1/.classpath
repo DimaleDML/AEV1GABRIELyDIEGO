@@ -6,8 +6,8 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="C:/Users/sabregabri/Desktop/workspace -add/AEV1/lib/commons-logging-1.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/sabregabri/Desktop/workspace -add/AEV1/lib/fontbox-2.0.3.jar"/>
-	<classpathentry kind="lib" path="C:/Users/sabregabri/Desktop/workspace -add/AEV1/lib/pdfbox-2.0.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/diego/OneDrive/Escritorio/AccesoDatos/AEV1/lib/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/diego/OneDrive/Escritorio/AccesoDatos/AEV1/lib/fontbox-2.0.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/diego/OneDrive/Escritorio/AccesoDatos/AEV1/lib/pdfbox-2.0.3.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

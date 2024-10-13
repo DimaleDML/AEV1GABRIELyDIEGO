@@ -1,12 +1,10 @@
 package main;
 
-import java.awt.Color;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import javax.swing.border.LineBorder;
 
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
@@ -34,6 +32,8 @@ import java.util.Date;
 import java.util.Enumeration;
 import java.awt.event.ActionEvent;
 import java.awt.Font;
+import javax.swing.border.LineBorder;
+import java.awt.Color;
 /**
  * Classe Vista per 
  * @author Gabriel Carmona Palop y Diego Martínez León
@@ -73,7 +73,7 @@ public class Vista extends JFrame {
 	 */
 	public Vista() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 707, 469);
+		setBounds(100, 100, 695, 469);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(150, 152, 245));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -89,15 +89,13 @@ public class Vista extends JFrame {
 				contentPane.add(lblNewLabel_1);
 
 		txtDirectorio = new JTextField();
-		txtDirectorio.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		txtDirectorio.setBorder(new LineBorder(new Color(171, 173, 179)));
 		txtDirectorio.setBackground(new Color(177, 180, 248));
-		txtDirectorio.setBounds(501, 28, 180, 40);
+		txtDirectorio.setBounds(501, 28, 168, 40);
 		contentPane.add(txtDirectorio);
 		txtDirectorio.setColumns(10);
 
 		btnDirectorio = new JButton("Buscar");
-		btnDirectorio.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		btnDirectorio.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (txtDirectorio.getText().equals("")) {
@@ -117,19 +115,17 @@ public class Vista extends JFrame {
 			}
 
 		});
-		btnDirectorio.setBounds(501, 79, 180, 40);
+		btnDirectorio.setBounds(501, 79, 168, 40);
 		contentPane.add(btnDirectorio);
 
 		txtPalabra = new JTextField();
-		txtPalabra.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		txtPalabra.setBorder(new LineBorder(new Color(171, 173, 179)));
 		txtPalabra.setBackground(new Color(177, 180, 248));
-		txtPalabra.setBounds(501, 147, 180, 40);
+		txtPalabra.setBounds(501, 147, 168, 40);
 		contentPane.add(txtPalabra);
 		txtPalabra.setColumns(10);
 
 		btnPalabra = new JButton("Buscar coincidencies");
-		btnPalabra.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		btnPalabra.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				txtAreaPrincipal.setText("");
@@ -148,33 +144,28 @@ public class Vista extends JFrame {
 				}
 			}
 		});
-		btnPalabra.setBounds(501, 250, 180, 40);
+		btnPalabra.setBounds(501, 250, 168, 40);
 		contentPane.add(btnPalabra);
 
 		chkMayusculas = new JCheckBox("Respectar mayuscules");
-		chkMayusculas.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		chkMayusculas.setBackground(new Color(150, 152, 245));
 		chkMayusculas.setBounds(501, 194, 168, 23);
 		contentPane.add(chkMayusculas);
 
 		chkAccents = new JCheckBox("Respectar accents");
-		chkAccents.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		chkAccents.setBackground(new Color(150, 152, 245));
 		chkAccents.setBounds(501, 220, 168, 23);
 		contentPane.add(chkAccents);
 
 		JLabel lblNewLabel = new JLabel("Buscar palabra:");
-		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		lblNewLabel.setBounds(501, 130, 130, 14);
 		contentPane.add(lblNewLabel);
 
 		JLabel lblBuscarDirectorio = new JLabel("Buscar directori:");
-		lblBuscarDirectorio.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		lblBuscarDirectorio.setBounds(501, 11, 130, 14);
 		contentPane.add(lblBuscarDirectorio);
 
-		btnReemplazar = new JButton("Remplaçar coincidencies");
-		btnReemplazar.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btnReemplazar = new JButton("Remplazar coincidencies");
 		btnReemplazar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				txtAreaPrincipal.setText("");
@@ -193,7 +184,7 @@ public class Vista extends JFrame {
 				}
 			}
 		});
-		btnReemplazar.setBounds(501, 365, 180, 40);
+		btnReemplazar.setBounds(501, 365, 168, 40);
 		contentPane.add(btnReemplazar);
 
 		JScrollPane scrollPane = new JScrollPane();
@@ -207,20 +198,19 @@ public class Vista extends JFrame {
 		txtAreaPrincipal.setFont(new Font("Monospaced", Font.BOLD, 14));
 
 		txtRemplazar = new JTextField();
-		txtRemplazar.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		txtRemplazar.setBorder(new LineBorder(new Color(171, 173, 179)));
 		txtRemplazar.setBackground(new Color(177, 180, 248));
 		txtRemplazar.setColumns(10);
-		txtRemplazar.setBounds(501, 314, 180, 40);
+		txtRemplazar.setBounds(501, 314, 168, 40);
 		contentPane.add(txtRemplazar);
 
 		JLabel lblRemplazar = new JLabel("Palabra a remplazar:");
-		lblRemplazar.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		lblRemplazar.setBounds(501, 297, 130, 14);
 		contentPane.add(lblRemplazar);
 
 	}
 
+	
 	/**
 	 * Mètode que mostra l'estructura de directoris dins del directori especificat , i la seua informació .
 	 * @param directori : Directori especificat
@@ -262,7 +252,7 @@ public class Vista extends JFrame {
 	 * @param arxiuActual : Arxiu que se li afegiran els espais segons el seu subnivell
 	 * @return String amb els caràcters necessaris per a l'arxiu en funció de la ubicació i el tipus de l'arxiu
 	 */
-	public static String posaEspais(int subnivell, File arxiuActual) {
+	private static String posaEspais(int subnivell, File arxiuActual) {
 		String resultat = "|";
 
 		for (int i = 1; i <= subnivell; i++) {
@@ -283,7 +273,7 @@ public class Vista extends JFrame {
 	 * @param sdf : Arreplega l'hora i data de la ultima modificació
 	 * @return String amb la informació de l'arxiu especificat
 	 */
-	public static String posarInfoArxius(File arxiu, SimpleDateFormat sdf) {
+	private static String posarInfoArxius(File arxiu, SimpleDateFormat sdf) {
 
 		return "(" + String.format("%.1f", (arxiu.length() / 1024.0)) + " KB - " + sdf.format(arxiu.lastModified())
 				+ ")";
@@ -297,7 +287,7 @@ public class Vista extends JFrame {
 	 * @param stringARemplazar : String per a reemplaçar el string a buscar
 	 * @return String amb les coincidències o els reemplaçaments efectuats 
 	 */
-	public static String posarInfoArxiusB(File arxiu, String stringABuscar, String opcio, String stringARemplazar) {
+	private static String posarInfoArxiusB(File arxiu, String stringABuscar, String opcio, String stringARemplazar) {
 		String mostra = "";
 		if (opcio.equals("coincidencies")) {
 
@@ -369,7 +359,7 @@ public class Vista extends JFrame {
 	 * @param arxiu : Archiu del qual llegir el contingut
 	 * @return String amb el text complet de l'archiu
 	 */
-	public static String llegirArxius(File arxiu) {
+	private static String llegirArxius(File arxiu) {
 		String lineas = "";
 		try {
 			FileReader fileReader = new FileReader(arxiu, StandardCharsets.UTF_8);
@@ -394,7 +384,7 @@ public class Vista extends JFrame {
 	 * @param cadenaATrobar : String amb la cadena exacta per a buscar en el text complet
 	 * @return String amb el numero de coincidències trobades
 	 */
-	public static String buscardorCoincidencies(String textComplet, String cadenaATrobar) {
+	private static String buscardorCoincidencies(String textComplet, String cadenaATrobar) {
 
 		if (!chkMayusculas.isSelected()) {
 			textComplet = textComplet.toLowerCase();
@@ -429,7 +419,7 @@ public class Vista extends JFrame {
 	 * @param arxiu :  Arxiu a comprovar
 	 * @return boolean que retorna si l'arxiu és valgut o no
 	 */
-	public static boolean esArxiuDeTextPla(File arxiu) {
+	private static boolean esArxiuDeTextPla(File arxiu) {
 
 		String[] extensions = { ".txt", ".csv", ".log", ".md", ".json", ".xml", ".tsv", ".html", ".htm", ".ini",
 				".properties", ".yaml", ".yml", ".sql", ".batch", ".sh", ".po", ".diff", ".patch" , ".pdf" };
@@ -450,7 +440,7 @@ public class Vista extends JFrame {
 	 * @param text : String amb el text modificat
 	 * @param arxiu : Arxiu original per a obtindre la ruta de l'arxiu
 	 */
-	public static void crearArchiuModificat(String text, File arxiu) {
+	private static void crearArchiuModificat(String text, File arxiu) {
 		File pare = arxiu.getParentFile();
 		String rutaArxiu = pare.getAbsolutePath();
 		File nouArxiu = new File(rutaArxiu + "/MOD_" + arxiu.getName());
@@ -462,5 +452,3 @@ public class Vista extends JFrame {
 		}
 	}
 }
-	
-	
